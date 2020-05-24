@@ -3,6 +3,7 @@
   <head>
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
+
     <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Basic&display=swap"
@@ -22,7 +23,11 @@
       <input id="color2" type="color" name="color2" value="#1ed2e1" />
     </div>
     <br />
-    <button id="random">RANDOM COLORS</button>
+    <div class="container button_cont" align="center">
+      <button id="random" class="example_d" align="center">
+        RANDOM COLORS
+      </button>
+    </div>
 
     <div class="dropdown-container">
       <label for="gradientLabel">Gradient type:</label>
@@ -53,10 +58,10 @@
       <p value="50"><span id="demo"></span></p>
     </div>
     <div id="grad"></div>
-    <div class="tooltip">
-      <button id="copyButton">
-        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>COPY
-        CSS CODE TO CLIPBOARD
+    <div class="tooltip button_cont" align="center">
+      <button id="copyButton" class="example_d" align="center">
+        <span class="tooltiptext" id="myTooltip"></span>COPY CSS CODE TO
+        CLIPBOARD
       </button>
     </div>
     <input id="not-visible" value=" " type="text" />
