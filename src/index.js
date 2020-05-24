@@ -58,14 +58,13 @@ function changeColor() {
 
 changeColor();
 
-function copyCssToClipboard() {
-  changeColor();
-  var copyText = document.getElementById("not-visible");
-  copyText.value = "background: " + body.style.background;
-
-  copyText.select();
-  //copyText.setSelectionRange(0, 99999);
+function copyToClipboard(copyText) {
+  const el = document.createElement("textarea");
+  el.value = copyText;
+  document.body.appendChild(el);
+  el.select();
   document.execCommand("copy");
+  document.body.removeChild(el);
   tooltip.innerHTML = "Copied!";
 }
 
@@ -85,7 +84,9 @@ ratioSlider.addEventListener("input", function() {
   changeColor();
 });
 
-copyButton.addEventListener("click", copyCssToClipboard);
+copyButton.addEventListener("click", function() {
+  copyToClipboard("background: " + body.style.background);
+});
 
 copyButton.addEventListener("mouseout", function() {
   tooltip.innerHTML = "Copy to clipboard";
