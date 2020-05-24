@@ -1,0 +1,106 @@
+body {
+  font-family: "Basic", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  top: 15%;
+  height: 100vh;
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  width: 100%;
+}
+
+h3 {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: grab;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #010e01;
+  cursor: grab;
+}
+
+.dropdown-container {
+  margin-top: 15px;
+}
+
+.slidercontainer {
+  margin-top: 20px;
+}
+
+#not-visible {
+  position: absolute;
+
+  visibility: hidden;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

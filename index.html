@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Basic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="gradient">
+    <h1>Background generator</h1>
+    <h2>Current CSS background</h2>
+    <div class="color-container">
+      <span id="hex1">COLOR 1 HEX=</span>
+      <input id="color1" type="color" name="color1" value="#2364be" />
+    </div>
+    <div class="color-container">
+      <span id="hex2">COLOR 2 HEX=</span>
+      <input id="color2" type="color" name="color2" value="#1ed2e1" />
+    </div>
+    <br />
+    <button id="random">RANDOM COLORS</button>
+
+    <div class="dropdown-container">
+      <label for="gradientLabel">Gradient type:</label>
+
+      <select name="gradientType" id="gradientType">
+        <option value="to bottom">top-bottom</option>
+        <option value="to top">bottom-top</option>
+        <option value="to right">left-right</option>
+        <option value="to left">right-left</option>
+        <optgroup label="Diagonally">
+          <option value="to bottom right">bottom-right</option>
+          <option value="to bottom left">bottom-left</option>
+          <option value="to top right">top-right</option>
+          <option value="to top left">top-left</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div class="slidercontainer">
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        class="slider"
+        id="myRange"
+      />
+      <p value="50"><span id="demo"></span></p>
+    </div>
+    <div id="grad"></div>
+    <div class="tooltip">
+      <button id="copyButton">
+        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>COPY
+        CSS CODE TO CLIPBOARD
+      </button>
+    </div>
+    <input id="not-visible" value=" " type="text" />
+    <script src="src/index.js"></script>
+  </body>
+</html>
