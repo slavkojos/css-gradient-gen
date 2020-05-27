@@ -1,24 +1,24 @@
-var body = document.querySelector("body");
+const body = document.querySelector("body");
 
-var color1 = document.getElementById("color1");
-var color2 = document.getElementById("color2");
-var gradient = document.createElement("h3");
-var grad = document.getElementById("grad");
-var hex1 = document.getElementById("hex1");
-var hex2 = document.getElementById("hex2");
-var copyButton = document.getElementById("copyButton");
+const color1 = document.getElementById("color1");
+const color2 = document.getElementById("color2");
+const gradient = document.createElement("h3");
+const grad = document.getElementById("grad");
+const hex1 = document.getElementById("hex1");
+const hex2 = document.getElementById("hex2");
+const copyButton = document.getElementById("copyButton");
 
-var ratioSlider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+const ratioSlider = document.getElementById("myRange");
+const output = document.getElementById("demo");
 
-var tooltip = document.getElementById("myTooltip");
+const tooltip = document.getElementById("myTooltip");
 
 grad.appendChild(gradient);
 output.textContent = ratioSlider.value;
 
-var randomButton = document.getElementById("random");
+const randomButton = document.getElementById("random");
 
-var dropdown = document.getElementById("gradientType");
+const dropdown = document.getElementById("gradientType");
 
 function updateColorRatio() {
   output.textContent = ratioSlider.value;
@@ -26,7 +26,7 @@ function updateColorRatio() {
 }
 
 function randomHexCode() {
-  var randomnumber = (Math.random() * 0xfffff * 1000000).toString(16);
+  const randomnumber = (Math.random() * 0xfffff * 1000000).toString(16);
   return "#" + randomnumber.slice(0, 6);
 }
 
