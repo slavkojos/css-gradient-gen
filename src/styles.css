@@ -204,3 +204,10 @@ h3 {
 .select-css[aria-disabled="true"] {
   border-color: #aaa;
 }
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-weight: 600;
+  font-size: 4rem;
+  
+}
