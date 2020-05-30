@@ -43,16 +43,7 @@ function chooseGradientStyle() {
 function changeColor() {
   hex1.innerHTML = "Color 1 HEX= <strong>" + color1.value + "</strong>";
   hex2.innerHTML = "Color 2 HEX= <strong>" + color2.value + "</strong>";
-  body.style.background =
-    "linear-gradient(" +
-    chooseGradientStyle() +
-    "," +
-    color1.value +
-    ", " +
-    updateColorRatio() +
-    "," +
-    color2.value +
-    ")";
+  body.style.background = `linear-gradient( ${chooseGradientStyle()},${color1.value}, ${updateColorRatio()},${color2.value})`;
   gradient.textContent = body.style.background;
 }
 
