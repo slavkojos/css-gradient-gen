@@ -54,13 +54,16 @@ h3 {
 }
 
 .dropdown-container {
-  margin-top: 15px;
+  display: flex;
+  margin:auto;
+  text-align: center;
 }
 
 .slidercontainer {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  max-width:fit-content ;
 }
 
 #demo {
@@ -81,7 +84,7 @@ h1 {
 
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 
@@ -91,12 +94,8 @@ h1 {
 
 .random-button-container {
   margin: 2%;
+  margin-bottom: 4%;
 }
-
-h1 {
-  font-size: 3.5rem;
-}
-
 
 
 /* TOOLTIP CSS */
@@ -191,4 +190,15 @@ h1 {
   border-width: 0px 5px 5px 5px;
   border-color: transparent transparent rgba(55, 64, 70, 0.9) transparent;
   transform-origin: bottom;
+}
+
+.copy-code-container {
+  margin: 5%;
+}
+
+.header {
+  display:flex;
+  margin: auto;
+  flex-wrap:wrap;
+  justify-content: center;
 }
