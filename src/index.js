@@ -47,8 +47,6 @@ function changeColor() {
   gradient.textContent = body.style.background;
 }
 
-changeColor();
-
 function copyToClipboard(copyText) {
   const el = document.createElement("textarea");
   el.value = copyText;
@@ -56,8 +54,12 @@ function copyToClipboard(copyText) {
   el.select();
   document.execCommand("copy");
   document.body.removeChild(el);
-  tooltip.innerHTML = "Copied!";
+  
 }
+
+
+changeColor();
+
 
 color1.addEventListener("input", changeColor);
 
@@ -76,9 +78,11 @@ ratioSlider.addEventListener("input", function() {
 });
 
 copyButton.addEventListener("click", function() {
-  copyToClipboard("background: " + body.style.background);
+  copyToClipboard(`background: " + ${body.style.background};`);
+  copyButton.setAttribute("data-tooltip","Copied!");
+  
 });
 
 copyButton.addEventListener("mouseout", function() {
-  tooltip.innerHTML = "Copy to clipboard";
+ copyButton.setAttribute("data-tooltip","Click to copy");
 });

@@ -37,13 +37,20 @@
       href="https://fonts.googleapis.com/css2?family=Basic&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="src/styles.css" />
   </head>
 
+
   <body id="gradient">
+    <div class="container">
+      <div class="header">
     <h1>CSS GRADIENT GENERATOR</h1>
+        
     <h2>Current CSS background</h2>
+  </div>
+    <div class="colors-container">
     <div class="color-container">
       <span id="hex1">COLOR 1 HEX=</span>
       <input id="color1" type="color" name="color1" value="#2364be" />
@@ -52,17 +59,15 @@
       <span id="hex2">COLOR 2 HEX=</span>
       <input id="color2" type="color" name="color2" value="#1ed2e1" />
     </div>
-    <br />
-    <div class="container button_cont" align="center">
-      <button id="random" class="example_d" align="center">
-        RANDOM COLORS
-      </button>
+  </div>
+    <div class="random-button-container">
+      <button id="random" class="btn btn-light">RANDOM COLORS</button>
     </div>
-
+  
     <div class="dropdown-container">
       <label for="gradientLabel">Gradient type:</label>
 
-      <select name="gradientType" id="gradientType" class="select-css">
+      <select name="gradientType" id="gradientType" class="custom-select">
         <option value="to bottom">top-bottom</option>
         <option value="to top">bottom-top</option>
         <option value="to right">left-right</option>
@@ -82,18 +87,22 @@
         min="0"
         max="100"
         value="50"
-        class="slider"
+        class="custom-range"
         id="myRange"
       />
       <span id="demo" value="50"></span>
     </div>
     <div id="grad"></div>
-    <div class="tooltip button_cont" align="center">
-      <button id="copyButton" class="example_d" align="center">
-        <span class="tooltiptext" id="myTooltip"></span>COPY CSS CODE TO
-        CLIPBOARD
+    <div class="copy-code-container">
+      <button data-tooltip="Click to copy" data-tooltip-location="bottom"  id="copyButton" class="btn btn-light">
+           COPY CSS CODE TO CLIPBOARD
       </button>
     </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="src/index.js"></script>
   </body>
 </html>
